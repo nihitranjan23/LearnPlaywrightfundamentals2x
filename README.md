@@ -19,11 +19,36 @@ Playwright is a powerful automation library for browser testing. This project de
 ```
 LearnPlaywrightfundamentals2x/
 ├── tests/
-│   └── example.spec.ts          # Sample Playwright tests
-├── playwright.config.ts          # Playwright configuration
-├── package.json                  # Node.js dependencies
-├── package-lock.json             # Locked dependency versions
-└── .gitignore                    # Git ignore rules
+│   ├── 01_Basics/
+│   ├── 02_first_tests/
+│   ├── 03_Locators_Commands/
+│   ├── 04_Session_Storage/
+│   ├── 05_Allure_Reporting/
+│   ├── 06_Multiple_Element_/
+│   ├── 07_WebTables/
+│   ├── 08_Web_Select_Frames_Iframe/
+│   ├── 09_Frame_Iframe/
+│   ├── 10_Keyboard_Hover_Drag_Drop/
+│   ├── 11_JS_Alerts/
+│   ├── 12_Handle_SVG/
+│   ├── 13_Shadow_DOM/
+│   ├── 14_FileUpload/
+│   ├── 15_File_Download/
+│   ├── 16_Scroll_toElement/
+│   ├── 17_Expect_Assertions/
+│   ├── 18_Test_hooks/
+│   ├── 19_Data_Driven_Testing/
+│   ├── 20_Page_Object_Model/
+│   ├── 21_Fixture/
+│   ├── 22_Misc_Concepts/
+│   ├── 23_Advance_Framework/
+│   ├── Projects/
+│   └── example.spec.ts           # Sample Playwright tests
+├── playwright.config.ts           # Playwright configuration
+├── package.json                   # Node.js dependencies
+├── package-lock.json              # Locked dependency versions
+├── README.md                      # Project documentation
+└── .gitignore                     # Git ignore rules
 ```
 
 ## Prerequisites
@@ -93,6 +118,34 @@ The `playwright.config.ts` file contains the test configuration:
 - **retries**: `2` (on CI) - Retry failed tests
 - **reporter**: `html` - Generate HTML reports
 - **projects**: Chromium, Firefox, WebKit browsers
+
+## Topics Covered
+
+The `tests/` directory is organized into topic-based folders covering:
+1. **Basics** - Playwright fundamentals
+2. **First Tests** - Writing your first tests
+3. **Locators & Commands** - Finding and interacting with elements
+4. **Session Storage** - Handling browser storage
+5. **Allure Reporting** - Test reporting integration
+6. **Multiple Elements** - Working with multiple elements
+7. **WebTables** - Table interactions
+8. **Web Select & Frames** - Dropdowns and frame handling
+9. **Frame & Iframe** - Advanced iframe handling
+10. **Keyboard, Hover, Drag & Drop** - Complex interactions
+11. **JS Alerts** - Handling JavaScript dialogs
+12. **Handle SVG** - Working with SVG elements
+13. **Shadow DOM** - Shadow DOM interactions
+14. **File Upload** - Uploading files
+15. **File Download** - Downloading files
+16. **Scroll to Element** - Scrolling operations
+17. **Expect Assertions** - Assertions and validations
+18. **Test Hooks** - Setup and teardown hooks
+19. **Data Driven Testing** - Parameterized tests
+20. **Page Object Model** - POM design pattern
+21. **Fixture** - Playwright fixtures
+22. **Misc Concepts** - Miscellaneous topics
+23. **Advance Framework** - Advanced framework concepts
+24. **Projects** - Real-world project examples
 
 ## Sample Tests
 
