@@ -20,8 +20,19 @@ Playwright is a powerful automation library for browser testing. This project de
 LearnPlaywrightfundamentals2x/
 ├── tests/
 │   ├── 01_Basics/
+│   │   ├── 229_Basic_test.spec.ts
+│   │   └── 230_Test_Annotations.spec.ts
 │   ├── 02_first_tests/
+│   │   ├── 231_First_verify_running.spec.ts
+│   │   ├── 232_BCP.spec.ts
+│   │   ├── 233_BCP_MultipleContext.spec.ts
+│   │   ├── 234_BCP_MultiplePages.spec.ts
+│   │   ├── 235_TEST_I_PW.spec.ts
+│   │   ├── 236_BCP_TEST_PW.spec.ts
+│   │   └── 237_BCP_OptionsTest.spec.ts
 │   ├── 03_Locators_Commands/
+│   │   ├── 238_LS.spec.ts
+│   │   └── 239_Project_VWO_login.spec.ts
 │   ├── 04_Session_Storage/
 │   ├── 05_Allure_Reporting/
 │   ├── 06_Multiple_Element_/
@@ -122,9 +133,9 @@ The `playwright.config.ts` file contains the test configuration:
 ## Topics Covered
 
 The `tests/` directory is organized into topic-based folders covering:
-1. **Basics** - Playwright fundamentals
-2. **First Tests** - Writing your first tests
-3. **Locators & Commands** - Finding and interacting with elements
+1. **Basics** - Playwright fundamentals and test annotations
+2. **First Tests** - Writing your first tests, browser context & page management, and test options
+3. **Locators & Commands** - Finding and interacting with elements, including a real-world VWO login project
 4. **Session Storage** - Handling browser storage
 5. **Allure Reporting** - Test reporting integration
 6. **Multiple Elements** - Working with multiple elements
