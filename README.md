@@ -32,7 +32,14 @@ LearnPlaywrightfundamentals2x/
 │   │   └── 237_BCP_OptionsTest.spec.ts
 │   ├── 03_Locators_Commands/
 │   │   ├── 238_LS.spec.ts
-│   │   └── 239_Project_VWO_login.spec.ts
+│   │   ├── 239_Project_VWO_login.spec.ts
+│   │   ├── 240_Xpath.spec.ts
+│   │   ├── 241_Project3_signup_VWO.spec.ts
+│   │   ├── 242_Project_3_Signup_VWO_PW_Locator.spec.ts
+│   │   ├── 243_PW_Command.spec.ts
+│   │   ├── 244_Refere_PW.spec.ts
+│   │   ├── 245_GetByRole_PW.spec.ts
+│   │   └── 246_PressSeq.spec.ts
 │   ├── 04_Session_Storage/
 │   ├── 05_Allure_Reporting/
 │   ├── 06_Multiple_Element_/
