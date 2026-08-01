@@ -11,6 +11,8 @@ Playwright is a powerful automation library for browser testing. This project de
 - **Cross-browser Testing**: Run tests on Chromium, Firefox, and WebKit
 - **Parallel Execution**: Tests run in parallel for faster feedback
 - **HTML Reporting**: Built-in HTML test reports for easy result analysis
+- **Allure Reporting**: Integrated Allure reports for rich test analytics
+- **Custom Reporter**: Optional custom reporter support via environment flag
 - **Retry Logic**: Automatic retries on CI environments for flaky test handling
 - **Trace Collection**: Captures traces on first retry to debug failures
 
@@ -41,9 +43,21 @@ LearnPlaywrightfundamentals2x/
 │   │   ├── 245_GetByRole_PW.spec.ts
 │   │   └── 246_PressSeq.spec.ts
 │   ├── 04_Session_Storage/
+│   │   ├── 247_Sessionstorage.spec.ts
+│   │   └── 249_TestVWODashboard_NoCustomReport.spec.ts
 │   ├── 05_Allure_Reporting/
+│   │   └── 249_TestVWODashboard_CustomReporter.spec.ts
 │   ├── 06_Multiple_Element_/
+│   │   ├── 250_Multi_element.spec.ts
+│   │   └── 251_Multi_Element_Direct.spec.ts
 │   ├── 07_WebTables/
+│   │   ├── 252_WebTables_Dynamic_Xpath.spec.ts
+│   │   ├── 253_WebTable_Dynamic.spec.ts
+│   │   ├── 254_Filter_PageLoc.spec.ts
+│   │   ├── 255_WebTable_Xapth.spec.ts
+│   │   ├── 256_WebTable_Xapth_Pagination.spec.ts
+│   │   ├── 257_WebTable_Xapth_Pagination.spec.ts
+│   │   └── 258_WebTable_Xapth_Pagination_Fn.spec.ts
 │   ├── 08_Web_Select_Frames_Iframe/
 │   ├── 09_Frame_Iframe/
 │   ├── 10_Keyboard_Hover_Drag_Drop/
@@ -62,6 +76,8 @@ LearnPlaywrightfundamentals2x/
 │   ├── 23_Advance_Framework/
 │   ├── Projects/
 │   └── example.spec.ts           # Sample Playwright tests
+├── Utils/
+│   └── Customreporter.ts         # Custom test reporter
 ├── playwright.config.ts           # Playwright configuration
 ├── package.json                   # Node.js dependencies
 ├── package-lock.json              # Locked dependency versions
@@ -121,11 +137,23 @@ npx playwright test tests/example.spec.ts
 npx playwright test --ui
 ```
 
+### Run with custom reporter enabled
+```bash
+$env:USE_CUSTOM_REPORTER="true"; npx playwright test
+```
+
 ## Viewing Reports
 
+### HTML Report
 After running tests, view the HTML report:
 ```bash
 npx playwright show-report
+```
+
+### Allure Report
+Generate and view the Allure report:
+```bash
+npx allure serve allure-results
 ```
 
 ## Configuration
@@ -134,8 +162,11 @@ The `playwright.config.ts` file contains the test configuration:
 - **testDir**: `./tests` - Location of test files
 - **fullyParallel**: `true` - Run tests in parallel
 - **retries**: `2` (on CI) - Retry failed tests
-- **reporter**: `html` - Generate HTML reports
-- **projects**: Chromium, Firefox, WebKit browsers
+- **headless**: `false` - Run tests in visible browser windows by default
+- **reporter**: 
+  - `allure-playwright` - Generate Allure reports in `allure-results`
+  - Custom reporter (`Utils/Customreporter.ts`) when `USE_CUSTOM_REPORTER=true`
+- **projects**: Chromium (Firefox and WebKit commented out)
 
 ## Topics Covered
 
@@ -143,26 +174,26 @@ The `tests/` directory is organized into topic-based folders covering:
 1. **Basics** - Playwright fundamentals and test annotations
 2. **First Tests** - Writing your first tests, browser context & page management, and test options
 3. **Locators & Commands** - Finding and interacting with elements, including a real-world VWO login project
-4. **Session Storage** - Handling browser storage
-5. **Allure Reporting** - Test reporting integration
-6. **Multiple Elements** - Working with multiple elements
-7. **WebTables** - Table interactions
-8. **Web Select & Frames** - Dropdowns and frame handling
-9. **Frame & Iframe** - Advanced iframe handling
-10. **Keyboard, Hover, Drag & Drop** - Complex interactions
-11. **JS Alerts** - Handling JavaScript dialogs
-12. **Handle SVG** - Working with SVG elements
-13. **Shadow DOM** - Shadow DOM interactions
-14. **File Upload** - Uploading files
-15. **File Download** - Downloading files
-16. **Scroll to Element** - Scrolling operations
-17. **Expect Assertions** - Assertions and validations
-18. **Test Hooks** - Setup and teardown hooks
-19. **Data Driven Testing** - Parameterized tests
-20. **Page Object Model** - POM design pattern
-21. **Fixture** - Playwright fixtures
-22. **Misc Concepts** - Miscellaneous topics
-23. **Advance Framework** - Advanced framework concepts
+4. **Session Storage** - Handling browser storage and session-based VWO dashboard tests
+5. **Allure Reporting** - Test reporting integration with Allure and custom reporter examples
+6. **Multiple Elements** - Working with multiple elements and direct element handling
+7. **WebTables** - Table interactions, dynamic XPath, filters, pagination, and functional pagination handling
+8. **Web Select & Frames** - Dropdowns and frame handling *(upcoming)*
+9. **Frame & Iframe** - Advanced iframe handling *(upcoming)*
+10. **Keyboard, Hover, Drag & Drop** - Complex interactions *(upcoming)*
+11. **JS Alerts** - Handling JavaScript dialogs *(upcoming)*
+12. **Handle SVG** - Working with SVG elements *(upcoming)*
+13. **Shadow DOM** - Shadow DOM interactions *(upcoming)*
+14. **File Upload** - Uploading files *(upcoming)*
+15. **File Download** - Downloading files *(upcoming)*
+16. **Scroll to Element** - Scrolling operations *(upcoming)*
+17. **Expect Assertions** - Assertions and validations *(upcoming)*
+18. **Test Hooks** - Setup and teardown hooks *(upcoming)*
+19. **Data Driven Testing** - Parameterized tests *(upcoming)*
+20. **Page Object Model** - POM design pattern *(upcoming)*
+21. **Fixture** - Playwright fixtures *(upcoming)*
+22. **Misc Concepts** - Miscellaneous topics *(upcoming)*
+23. **Advance Framework** - Advanced framework concepts *(upcoming)*
 24. **Projects** - Real-world project examples
 
 ## Sample Tests
@@ -176,6 +207,7 @@ The `tests/example.spec.ts` file includes:
 - [Playwright Documentation](https://playwright.dev/docs/intro)
 - [Playwright API Reference](https://playwright.dev/docs/api/class-playwright)
 - [Playwright Best Practices](https://playwright.dev/docs/best-practices)
+- [Allure Playwright Integration](https://allurereport.org/docs/playwright/)
 
 ## Contributing
 

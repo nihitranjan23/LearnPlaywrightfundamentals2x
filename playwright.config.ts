@@ -21,20 +21,26 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ['allure-playwright', {
-      detail: true,
-      outputFolder: 'allure-results',
-      suiteTitle: true,
-      environmentInfo: {
-        node_version: process.version,
-        os_platform: process.platform,
-      },
-    }],
-  ],
+    /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+    reporter: [
+        ['allure-playwright', {
+            detail: true,
+            outputFolder: 'allure-results',
+            suiteTitle: true,
+            environmentInfo: {
+                node_version: process.version,
+                os_platform: process.platform,
+            },
+        }],
+        ...(process.env.USE_CUSTOM_REPORTER === 'true'
+            ? [['./Utils/Customreporter.ts'] as [string]]
+            : []),
+    ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    /* Run tests in headed mode (browser window visible) */
+    headless: false,
+
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 

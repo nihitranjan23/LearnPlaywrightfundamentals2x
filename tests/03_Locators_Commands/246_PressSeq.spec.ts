@@ -12,3 +12,9 @@ test("locators are lazy, strict, and auto-wait", async ({ page }) => {
 
 
 });
+
+//Action	Real-Life Example
+//.fill()	Copy-paste — instant
+//.pressSequentially()	Typing slowly on your phone with one finger
+
+//"Find the first name text box, and slowly type 'the testing academy' one letter at a time, waiting 200ms between each letter."

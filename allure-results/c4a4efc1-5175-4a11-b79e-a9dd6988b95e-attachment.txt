@@ -1,0 +1,15 @@
+Lenght of pannel=13
+Login
+Register
+Forgotten Password
+My Account
+Address Book
+Wish List
+Order History
+Downloads
+Recurring Payments
+Reward Points
+Returns
+Transactions
+Newsletter
+Link of forget password is:Forgotten Password
