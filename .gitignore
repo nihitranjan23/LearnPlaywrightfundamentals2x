@@ -6,3 +6,13 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Session files
+user-session.json
+
+# Allure results
+allure-results/
+allure-report/
+
+# Custom reports
+tta-report/
