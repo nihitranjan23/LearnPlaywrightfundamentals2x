@@ -1,12 +1,130 @@
 # Playwright Keyboard, Mouse & Core Functions Reference
 
 ## Table of Contents
-1. [Keyboard Functions](#keyboard-functions)
-2. [Mouse Functions](#mouse-functions)
-3. [Core Playwright Functions](#core-playwright-functions)
-4. [Page Functions](#page-functions)
-5. [Locator Functions](#locator-functions)
-6. [Assertion Functions](#assertion-functions)
+1. [Quick Cheat Sheet](#quick-cheat-sheet)
+2. [Keyboard Functions](#keyboard-functions)
+3. [Mouse Functions](#mouse-functions)
+4. [Core Playwright Functions](#core-playwright-functions)
+5. [Page Functions](#page-functions)
+6. [Locator Functions](#locator-functions)
+7. [Assertion Functions](#assertion-functions)
+
+---
+
+## Quick Cheat Sheet
+
+### Essential One-Liners
+
+```typescript
+// Navigation
+await page.goto('https://example.com');
+await page.reload();
+await page.goBack();
+await page.goForward();
+
+// Locators
+page.locator('css');
+page.getByText('text');
+page.getByRole('button');
+page.getByTestId('id');
+page.getByLabel('label');
+page.getByPlaceholder('placeholder');
+
+// Interactions
+await page.click('selector');
+await page.fill('input', 'value');
+await page.selectOption('select', 'option');
+await page.check('checkbox');
+await page.uncheck('checkbox');
+await page.hover('element');
+await page.dragAndDrop('#src', '#dst');
+
+// Keyboard
+await page.keyboard.press('Enter');
+await page.keyboard.press('Control+a');
+await page.keyboard.type('Hello');
+await page.keyboard.down('Shift');
+await page.keyboard.up('Shift');
+
+// Mouse
+await page.mouse.click(100, 200);
+await page.mouse.dblclick(100, 200);
+await page.mouse.down();
+await page.mouse.up();
+await page.mouse.move(100, 200);
+await page.mouse.wheel(0, 500);
+
+// Assertions
+await expect(locator).toBeVisible();
+await expect(locator).toBeHidden();
+await expect(locator).toHaveText('text');
+await expect(locator).toContainText('text');
+await expect(locator).toHaveValue('value');
+await expect(locator).toBeChecked();
+await expect(locator).toBeEnabled();
+await expect(page).toHaveTitle('Title');
+await expect(page).toHaveURL(/regex/);
+
+// Waits
+await page.waitForSelector('selector');
+await page.waitForLoadState('networkidle');
+await page.waitForURL('**/url');
+await page.waitForResponse('**/api');
+
+// Frames
+const frame = page.frameLocator('iframe');
+await frame.locator('button').click();
+
+// Dialogs
+page.on('dialog', async dialog => {
+  if (dialog.type() === 'confirm') await dialog.accept();
+  else await dialog.dismiss();
+});
+
+// Screenshots
+await page.screenshot({ path: 'page.png' });
+await locator.screenshot({ path: 'el.png' });
+
+// Evaluate
+await page.evaluate(() => document.title);
+await page.evaluate(el => el.innerText, await page.locator('div').elementHandle());
+```
+
+### Modifier Key Shortcuts Reference
+
+| Action | Syntax |
+|--------|--------|
+| Select All | `Control+a` |
+| Copy | `Control+c` |
+| Paste | `Control+v` |
+| Cut | `Control+x` |
+| Undo | `Control+z` |
+| Redo | `Control+Shift+z` |
+| Save | `Control+s` |
+| Find | `Control+f` |
+| New Tab | `Control+t` |
+| Close Tab | `Control+w` |
+| Refresh | `F5` / `Control+r` |
+
+### Common Mouse Patterns
+
+| Pattern | Code |
+|---------|------|
+| Click | `await page.mouse.click(x, y)` |
+| Right-click | `await page.mouse.click(x, y, { button: 'right' })` |
+| Double-click | `await page.mouse.dblclick(x, y)` |
+| Drag & Drop | `down() → move() → up()` |
+| Scroll down | `await page.mouse.wheel(0, 500)` |
+| Scroll up | `await page.mouse.wheel(0, -500)` |
+
+### Lifecycle Hooks
+
+```typescript
+test.beforeAll(async () => { /* once before all tests */ });
+test.afterAll(async () => { /* once after all tests */ });
+test.beforeEach(async ({ page }) => { /* before each test */ });
+test.afterEach(async ({ page }) => { /* after each test */ });
+```
 
 ---
 
