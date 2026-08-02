@@ -59,6 +59,9 @@ LearnPlaywrightfundamentals2x/
 │   │   ├── 257_WebTable_Xapth_Pagination.spec.ts
 │   │   └── 258_WebTable_Xapth_Pagination_Fn.spec.ts
 │   ├── 08_Web_Select_Frames_Iframe/
+│   │   ├── 259_Select.spec.ts
+│   │   ├── 260_Custom_DD_Select.spec.ts
+│   │   └── 261_Advance_Select_Pro.spec.ts
 │   ├── 09_Frame_Iframe/
 │   ├── 10_Keyboard_Hover_Drag_Drop/
 │   ├── 11_JS_Alerts/
@@ -178,7 +181,7 @@ The `tests/` directory is organized into topic-based folders covering:
 5. **Allure Reporting** - Test reporting integration with Allure and custom reporter examples
 6. **Multiple Elements** - Working with multiple elements and direct element handling
 7. **WebTables** - Table interactions, dynamic XPath, filters, pagination, and functional pagination handling
-8. **Web Select & Frames** - Dropdowns and frame handling *(upcoming)*
+8. **Web Select & Frames** - Dropdowns and frame handling: standard select options, custom dropdown interactions, and advanced searchable/multi-select/creatable/async select boxes
 9. **Frame & Iframe** - Advanced iframe handling *(upcoming)*
 10. **Keyboard, Hover, Drag & Drop** - Complex interactions *(upcoming)*
 11. **JS Alerts** - Handling JavaScript dialogs *(upcoming)*
