@@ -63,11 +63,26 @@ LearnPlaywrightfundamentals2x/
 │   │   ├── 260_Custom_DD_Select.spec.ts
 │   │   └── 261_Advance_Select_Pro.spec.ts
 │   ├── 09_Frame_Iframe/
+│   │   ├── 262_Iframe.spec.ts
+│   │   ├── 263_frameSet.spec.ts
+│   │   └── 264_Iframe_part2.spec.ts
 │   ├── 10_Keyboard_Hover_Drag_Drop/
+│   │   ├── 265_Keyboard.spec.ts
+│   │   ├── 266_SpiceJet_Hover.spec.ts
+│   │   ├── 267_Drag_Drop.spec.ts
+│   │   ├── 268_Advance_Drag_Drop.spec.ts
+│   │   └── 269_Context_Menu.spec.ts
 │   ├── 11_JS_Alerts/
+│   │   └── 270_JS.spec.ts
 │   ├── 12_Handle_SVG/
+│   │   ├── 271_SVG.spec.ts
+│   │   ├── 272_SVG_Practice.spec.ts
+│   │   └── 273_Advance_SVG.spec.ts
 │   ├── 13_Shadow_DOM/
+│   │   └── 274_Shadow_DOM.spec.ts
 │   ├── 14_FileUpload/
+│   │   ├── 275_File_Upload.spec.ts
+│   │   └── 276_Multiple_File_Upload.spec.ts
 │   ├── 15_File_Download/
 │   ├── 16_Scroll_toElement/
 │   ├── 17_Expect_Assertions/
@@ -182,12 +197,12 @@ The `tests/` directory is organized into topic-based folders covering:
 6. **Multiple Elements** - Working with multiple elements and direct element handling
 7. **WebTables** - Table interactions, dynamic XPath, filters, pagination, and functional pagination handling
 8. **Web Select & Frames** - Dropdowns and frame handling: standard select options, custom dropdown interactions, and advanced searchable/multi-select/creatable/async select boxes
-9. **Frame & Iframe** - Advanced iframe handling *(upcoming)*
-10. **Keyboard, Hover, Drag & Drop** - Complex interactions *(upcoming)*
-11. **JS Alerts** - Handling JavaScript dialogs *(upcoming)*
-12. **Handle SVG** - Working with SVG elements *(upcoming)*
-13. **Shadow DOM** - Shadow DOM interactions *(upcoming)*
-14. **File Upload** - Uploading files *(upcoming)*
+9. **Frame & Iframe** - Frame and iframe interactions including nested frames and framesets
+10. **Keyboard, Hover, Drag & Drop** - Keyboard actions, hover interactions, drag & drop, context menus, and advanced drag-drop
+11. **JS Alerts** - JavaScript dialog handling and alerts
+12. **Handle SVG** - SVG element interactions and advanced SVG handling
+13. **Shadow DOM** - Shadow DOM element interactions
+14. **File Upload** - Single and multiple file uploads including buffer-based uploads
 15. **File Download** - Downloading files *(upcoming)*
 16. **Scroll to Element** - Scrolling operations *(upcoming)*
 17. **Expect Assertions** - Assertions and validations *(upcoming)*
