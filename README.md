@@ -94,6 +94,7 @@ LearnPlaywrightfundamentals2x/
 │   │   ├── 282_Project.spec.ts
 │   │   └── 283_Expect.cheatsheet.md
 │   ├── 18_Test_hooks/
+│   │   └── 285_Chrome_Arg_List.md
 │   ├── 19_Data_Driven_Testing/
 │   ├── 20_Page_Object_Model/
 │   ├── 21_Fixture/
@@ -213,7 +214,7 @@ The `tests/` directory is organized into topic-based folders covering:
 15. **File Download** - Handling file downloads with Playwright
 16. **Scroll to Element** - Scrolling elements into view
 17. **Expect Assertions** - Comprehensive assertion reference with interview cheatsheet
-18. **Test Hooks** - Setup and teardown hooks *(upcoming)*
+18. **Test Hooks** - Chrome/Chromium command-line arguments reference
 19. **Data Driven Testing** - Parameterized tests *(upcoming)*
 20. **Page Object Model** - POM design pattern *(upcoming)*
 21. **Fixture** - Playwright fixtures *(upcoming)*
