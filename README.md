@@ -88,6 +88,7 @@ LearnPlaywrightfundamentals2x/
 │   ├── 16_Scroll_toElement/
 │   │   └── 278_ScrollToView.spec.ts
 │   ├── 17_Expect_Assertions/
+│   │   └── 283_expected.cheatsheet.md
 │   ├── 18_Test_hooks/
 │   ├── 19_Data_Driven_Testing/
 │   ├── 20_Page_Object_Model/
@@ -207,7 +208,7 @@ The `tests/` directory is organized into topic-based folders covering:
 14. **File Upload** - Single and multiple file uploads including buffer-based uploads
 15. **File Download** - Handling file downloads with Playwright
 16. **Scroll to Element** - Scrolling elements into view
-17. **Expect Assertions** - Assertions and validations *(upcoming)*
+17. **Expect Assertions** - Comprehensive assertion reference with interview cheatsheet
 18. **Test Hooks** - Setup and teardown hooks *(upcoming)*
 19. **Data Driven Testing** - Parameterized tests *(upcoming)*
 20. **Page Object Model** - POM design pattern *(upcoming)*
