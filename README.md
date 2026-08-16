@@ -94,7 +94,8 @@ LearnPlaywrightfundamentals2x/
 │   │   ├── 282_Project.spec.ts
 │   │   └── 283_Expect.cheatsheet.md
 │   ├── 18_Test_hooks/
-│   │   └── 285_Chrome_Arg_List.md
+│   │   ├── 285_Chrome_Arg_List.md
+│   │   └── 286_Test_Hook_Cheatsheet.md
 │   ├── 19_Data_Driven_Testing/
 │   ├── 20_Page_Object_Model/
 │   ├── 21_Fixture/
