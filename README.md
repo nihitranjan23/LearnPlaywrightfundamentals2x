@@ -88,7 +88,11 @@ LearnPlaywrightfundamentals2x/
 │   ├── 16_Scroll_toElement/
 │   │   └── 278_ScrollToView.spec.ts
 │   ├── 17_Expect_Assertions/
-│   │   └── 283_expected.cheatsheet.md
+│   │   ├── 279_Expect.spec.ts
+│   │   ├── 280_Expect.spec.ts
+│   │   ├── 281_Expect.spec.ts
+│   │   ├── 282_Project.spec.ts
+│   │   └── 283_Expect.cheatsheet.md
 │   ├── 18_Test_hooks/
 │   ├── 19_Data_Driven_Testing/
 │   ├── 20_Page_Object_Model/
